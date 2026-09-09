@@ -1,0 +1,50 @@
+Teste prático front-end: formulário com busca de endereço
+tela única: um formulário de cadastro de cliente. O diferencial é que, ao terminar de digitar o CEP, 
+os campos de endereço se preenchem sozinhos consultando uma API pública.
+
+ Três arquivos, nada além disso: index.html style.css script.js
+
+ A API de CEP Endpoint: https://viacep.com.br/ws/{cep}/json/ Sem chave, sem cadastro, funciona direto do navegador. 
+ Exemplo: https://viacep.com.br/ws/01310930/json/ 
+ 
+ Resposta: { 
+    "cep": "01310-930", 
+    "logradouro": "Avenida Paulista", 
+     "bairro": "Bela Vista", 
+     "localidade": "São Paulo", 
+    "uf": "SP" }
+
+    Rua logradouro 
+    Bairro bairro 
+    Cidade localidade 
+    Estado (UF) uf
+
+    Ponto de atenção: CEP que não existe não retorna erro de HTTP. 
+    A API responde status 200 com "erro": "true" } . 
+    Você precisa checar isso na mão. 
+    Para você não travar na parte de rede, o esqueleto da chamada: 
+    
+    async function buscarEndereco(cep) { 
+        const somenteNumeros = cep.replace(/\D/g, '') 
+        
+        const resposta = await fetch(`https://viacep.com.br/ws/${somenteNumeros}/json/`) 
+        const dados = await resposta.json() 
+        
+        if (dados.erro) { 
+            return null 
+            } 
+            
+            return dados 
+            }
+
+
+ Campos do formulário
+ 1. Nome completo 
+ 2. E-mail 
+ 3. Telefone 
+ 4. CEP 
+ 5. Rua (preenchido pela API) 
+ 6. Número 
+ 7. Bairro (preenchido pela API) 
+ 8. Cidade (preenchido pela API) 
+ 9. Estado / UF (preenchido pela API)           

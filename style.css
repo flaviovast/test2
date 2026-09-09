@@ -1,0 +1,201 @@
+
+header{
+    background-color:#7C3AED;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.client{
+    color: white;
+    background-color: #7C3AED;
+    font-family:system-ui, sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    text-align:left;
+    margin-left:10px; margin-right:10px;
+}
+
+.fill{
+    color: white;
+    font-family:system-ui, sans-serif;
+    text-align:left;
+    font-size: 15px;
+    margin-left:10px; margin-right:10px;
+    font-weight: 500;
+
+}
+
+.mandatory{
+    color: white;
+    background-color: #7C3AED;
+    font-family:system-ui, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-align:left;
+    margin-left:10px; margin-top:auto; margin-right:10px;
+}
+
+body{
+    margin-left:250px;
+    background-color: #F8F7FC;
+}
+
+.header{
+    color:black;
+    text-align:left;
+    font-size: 15px;
+    font-weight:700;
+    margin-top: 20px; margin-bottom:2px; margin-left:16px;
+    font-family: system-ui, sans-serif
+    
+
+}
+
+.header2{
+    color:#6B6391;
+    text-align:left;
+    font-size: 13px;
+    font-weight:700;
+    margin-top: 0px; margin-left:16px;
+    font-family: system-ui, sans-serif
+}
+
+.fullname{
+    color:#6B6391;
+    text-align:left;
+    font-size: 13px;
+    font-weight:700;
+    margin-top: 20px; 
+    font-family: system-ui, sans-serif
+}
+
+form{
+    width: 80%;
+    background-color: #F8F7FC;
+    margin-top: 10px; margin-left:16px; margin-right:16px; margin-bottom:0px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nome{
+    background-color: #ffffff;
+    color:#6B6391;
+    padding-top: 12px; padding-bottom: 12px; padding-left: 14px; padding-right: 80%;
+    border-radius:10px;
+    border: 1px; border-color:#C4B5FD;
+    text-align:left;
+    font-size: 13px;
+    font-weight:700;
+    margin-top: 10px; 
+    font-family: system-ui, sans-serif
+    
+}
+
+.email-tel {
+    display: flex;
+    align-items: flex-start;
+
+}
+
+.email{
+     color:#6B6391;
+    text-align:left;
+    font-size: 13px;
+    font-weight:700;
+    font-family: system-ui, sans-serif
+
+}
+
+.digiteemail{
+      background-color: #ffffff;
+    color:#6B6391;
+    padding-top: 12px; padding-bottom: 12px; padding-left: 14px; max-width:70%;
+    border-radius:10px;
+    border: 1px; border-color:#C4B5FD;
+    text-align:left;
+    font-size: 13px;
+    font-weight:700;
+    margin-top: 10px; 
+    font-family: system-ui, sans-serif
+
+}
+
+
+.phone{
+       color:#6B6391;
+    text-align:left;
+    font-size: 13px;
+    font-weight:700; 
+    font-family: system-ui, sans-serif
+     
+}
+
+.digitetelefone{
+     background-color: #ffffff;
+    color:#6B6391;
+    padding-top: 12px; padding-bottom: 12px; padding-left: 14px;  max-width:80%;
+    border-radius:10px;
+    border: 1px; border-color:#C4B5FD;
+    text-align:left;
+    font-size: 13px;
+    font-weight:700;
+    margin-top: 10px; 
+    font-family: system-ui, sans-serif
+}
+
+.header3{color:black;
+    text-align:left;
+    font-size: 15px;
+    font-weight:700;
+    margin-top: 20px; margin-bottom:2px; margin-left:16px;
+    font-family: system-ui, sans-serif
+
+}
+
+.header4{
+    color:#6B6391;
+    text-align:left;
+    font-size: 13px;
+    font-weight:700;
+    margin-top: 0px; margin-left:16px;
+    font-family: system-ui, sans-serif
+}
+
+.cep-rua {
+    display: flex;
+    align-items: flex-start;
+}
+
+.cep{
+    color:#6B6391;
+    text-align:left;
+    font-size: 13px;
+    font-weight:700;
+    margin-top: 20px; 
+    font-family: system-ui, sans-serif
+}
+
+
+.numero-bairro {
+    display: flex;
+    align-items: flex-start;
+}
+
+.cidade-estado {
+    display: flex;
+    align-items: flex-start;
+}
+
+*{outline: 1px solid red;}
+
+
+
+
+
