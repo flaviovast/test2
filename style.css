@@ -47,7 +47,8 @@ body{
     background-color: #F8F7FC;
 }
 
-.header{
+.header,
+.header3{
     color:black;
     text-align:left;
     font-size: 15px;
@@ -58,13 +59,20 @@ body{
 
 }
 
-.header2{
-    color:#6B6391;
-    text-align:left;
-    font-size: 13px;
-    font-weight:700;
-    margin-top: 0px; margin-left:16px;
-    font-family: system-ui, sans-serif
+.header3{
+    margin-left: 0px;
+}
+
+
+form{
+    width: 80%;
+    background-color: #F8F7FC;
+    margin-top: 10px; margin-right:16px; margin-left: 16px; margin-bottom:0px;
+    border-radius: 5px;
+}
+
+form *{
+    margin-left: 0px;
 }
 
 .fullname{
@@ -76,18 +84,11 @@ body{
     font-family: system-ui, sans-serif
 }
 
-form{
-    width: 80%;
-    background-color: #F8F7FC;
-    margin-top: 10px; margin-left:16px; margin-right:16px; margin-bottom:0px;
-    padding: 10px;
-    border-radius: 5px;
-}
 
 .nome{
     background-color: #ffffff;
     color:#6B6391;
-    padding-top: 12px; padding-bottom: 12px; padding-left: 14px; padding-right: 80%;
+    padding-top: 12px; padding-bottom: 12px; padding-left: 14px;
     border-radius:10px;
     border: 1px; border-color:#C4B5FD;
     text-align:left;
@@ -98,23 +99,72 @@ form{
     
 }
 
-.email-tel {
-    display: flex;
-    align-items: flex-start;
-
+.email-tel,
+.cep-rua,
+.cidade-estado,
+.numero-bairro {
+    display: grid; 
+    flex-direction: 1fr 1fr;
 }
 
-.email{
-     color:#6B6391;
+.email,
+.cep,
+.numero,
+.cidade{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.digiteemail,
+.digitecep,
+.digitenumero,
+.digitecidade {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.phone,
+.cep-rua,
+.bairro,
+.estado {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.digitetelefone,
+.digiteendereco,
+.digitebairro,
+.digiteestado {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+
+.header2,
+.header4{
+    color:#6B6391;
     text-align:left;
     font-size: 13px;
     font-weight:700;
+    margin-top: 0px; 
     font-family: system-ui, sans-serif
-
 }
 
-.digiteemail{
-      background-color: #ffffff;
+.header2{
+    margin-left: 16px;
+}
+
+
+
+form > div > h1 {
+    color: #6B6391;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: system-ui, sans-serif;
+    margin-left: 0px;
+}
+
+input{background-color: #ffffff;
     color:#6B6391;
     padding-top: 12px; padding-bottom: 12px; padding-left: 14px; max-width:70%;
     border-radius:10px;
@@ -123,75 +173,7 @@ form{
     font-size: 13px;
     font-weight:700;
     margin-top: 10px; 
-    font-family: system-ui, sans-serif
-
-}
-
-
-.phone{
-       color:#6B6391;
-    text-align:left;
-    font-size: 13px;
-    font-weight:700; 
-    font-family: system-ui, sans-serif
-     
-}
-
-.digitetelefone{
-     background-color: #ffffff;
-    color:#6B6391;
-    padding-top: 12px; padding-bottom: 12px; padding-left: 14px;  max-width:80%;
-    border-radius:10px;
-    border: 1px; border-color:#C4B5FD;
-    text-align:left;
-    font-size: 13px;
-    font-weight:700;
-    margin-top: 10px; 
-    font-family: system-ui, sans-serif
-}
-
-.header3{color:black;
-    text-align:left;
-    font-size: 15px;
-    font-weight:700;
-    margin-top: 20px; margin-bottom:2px; margin-left:16px;
-    font-family: system-ui, sans-serif
-
-}
-
-.header4{
-    color:#6B6391;
-    text-align:left;
-    font-size: 13px;
-    font-weight:700;
-    margin-top: 0px; margin-left:16px;
-    font-family: system-ui, sans-serif
-}
-
-.cep-rua {
-    display: flex;
-    align-items: flex-start;
-}
-
-.cep{
-    color:#6B6391;
-    text-align:left;
-    font-size: 13px;
-    font-weight:700;
-    margin-top: 20px; 
-    font-family: system-ui, sans-serif
-}
-
-
-.numero-bairro {
-    display: flex;
-    align-items: flex-start;
-}
-
-.cidade-estado {
-    display: flex;
-    align-items: flex-start;
-}
+    font-family: system-ui, sans-serif}
 
 *{outline: 1px solid red;}
 
