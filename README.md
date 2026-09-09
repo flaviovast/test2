@@ -1,50 +1,28 @@
-Teste prático: formulário com busca de endereço
-tela única: um formulário de cadastro de cliente. O diferencial é que, ao terminar de digitar o CEP, 
-os campos de endereço se preenchem sozinhos consultando uma API pública.
+Customer Registration Form 📋
 
- Três arquivos, nada além disso: index.html style.css script.js
+A simple customer registration form with a handy ZIP code lookup feature using the ViaCEP API.
 
- A API de CEP Endpoint: https://viacep.com.br/ws/{cep}/json/ Sem chave, sem cadastro, funciona direto do navegador. 
- Exemplo: https://viacep.com.br/ws/01310930/json/ 
- 
- Resposta: { 
-    "cep": "01310-930", 
-    "logradouro": "Avenida Paulista", 
-     "bairro": "Bela Vista", 
-     "localidade": "São Paulo", 
-    "uf": "SP" }
+Just enter a ZIP code and the address fields will be filled in automatically. No API key or registration needed!
 
-    Rua logradouro 
-    Bairro bairro 
-    Cidade localidade 
-    Estado (UF) uf
+✨ Features
+Easy-to-use customer registration form
+Automatic address lookup by ZIP code
+Uses the public ViaCEP API
+Built with HTML, CSS, and JavaScript
+📁 Files
+index.html
+style.css
+script.js
+🔎 How It Works
 
-    Ponto de atenção: CEP que não existe não retorna erro de HTTP. 
-    A API responde status 200 com "erro": "true" } . 
-    Você precisa checar isso na mão. 
-    Para você não travar na parte de rede, o esqueleto da chamada: 
-    
-    async function buscarEndereco(cep) { 
-        const somenteNumeros = cep.replace(/\D/g, '') 
-        
-        const resposta = await fetch(`https://viacep.com.br/ws/${somenteNumeros}/json/`) 
-        const dados = await resposta.json() 
-        
-        if (dados.erro) { 
-            return null 
-            } 
-            
-            return dados 
-            }
+Enter a valid ZIP code and the form automatically fills in:
 
+Street
+Neighborhood
+City
+State / UF
+🚀 Getting Started
 
- Campos do formulário
- 1. Nome completo 
- 2. E-mail 
- 3. Telefone 
- 4. CEP 
- 5. Rua (preenchido pela API) 
- 6. Número 
- 7. Bairro (preenchido pela API) 
- 8. Cidade (preenchido pela API) 
- 9. Estado / UF (preenchido pela API)   
+No installation or dependencies required.
+
+Just open index.html in your browser and you're ready to go!
