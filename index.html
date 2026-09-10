@@ -19,16 +19,16 @@
 
     <form action="index.html" method="post">
         <h1 class="fullname">Nome completo</h1>
-        <input class="nome" type="text" name="nome" placeholder="Digite seu nome completo" required>
+        <input id="nome" class="nome" type="text" name="nome" placeholder="Digite seu nome completo" required>
 
       <div class="email-tel">
       
         <h1 class="email">E-mail</h1>
-        <input class="digiteemail" type="email" name="email" placeholder="Digite seu e-mail" required>
+        <input id="email" class="digiteemail" type="email" name="email" placeholder="Digite seu e-mail" required>
     
 
         <h1 class="phone">Telefone</h1>
-        <input class="digitetelefone" type="tel" name="telefone" placeholder="Digite seu telefone" required>
+        <input id="telefone" class="digitetelefone" type="tel" name="telefone" placeholder="Digite seu telefone" required>
     
      </div>
 
@@ -38,38 +38,41 @@
       <div class="cep-rua">
     
         <h1 class="cep">CEP</h1>
-        <input class="digitecep" type="number" name="cep" placeholder="Digite seu CEP" required>
+        <input id="cep" class="digitecep" type="text" name="cep" placeholder="Digite seu CEP" required>
+        <span id="status-cep"></span>
 
         <h1 class="rua">Rua</h1>
-        <input class="digiteendereco" type="text" name="endereco" placeholder="Digite seu endereço" required>
+        <input id="endereco" class="digiteendereco" type="text" name="endereco" placeholder="Digite seu endereço" required>
    
       </div>
 
       <div class="numero-bairro">
     
         <h1 class="numero">Número</h1>
-        <input type="number" name="numero" placeholder="Digite o número" required>
+        <input id="numero" type="number" name="numero" placeholder="Digite o número" required>
     
         <h1 class="bairro">Bairro</h1>
-        <input class="digitebairro" type="text" name="bairro" placeholder="Digite seu bairro" required>
+        <input id="bairro" class="digitebairro" type="text" name="bairro" placeholder="Digite seu bairro" required>
     
       </div>
 
       <div class="cidade-estado">
             <h1 class="cidade">Cidade</h1>
-            <input class="digitecidade" type="text" name="Cidade" placeholder="Digite sua cidade" required>
+            <input id="cidade" class="digitecidade" type="text" name="Cidade" placeholder="Digite sua cidade" required>
 
             <h1 class="estado">Estado</h1>
-            <input class="digiteestado" type="text" name="estado" placeholder="Digite seu estado" required>
+            <input id="estado" class="digiteestado" type="text" name="estado" placeholder="Digite seu estado" required>
       </div>
        
 
-      <button type="submit">Enviar cadastro</button>
+      <button id="botao" type="submit">Enviar cadastro</button>
 
       </form>
 
         <h5 class="header5">Campos em roxo claro foram preenchidos pela consulata do CEP e podem ser corrigidos.</h5>
-    
+  
+   <script src="script.js"></script>     
+
 </body>
 
 
