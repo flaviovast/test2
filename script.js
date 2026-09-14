@@ -23,7 +23,17 @@ async function buscarcep(cep){
 
 
 campocep.addEventListener('input', async function(){
-    const cepsemhifem = campocep.value.replace ('-','')
+    const cepsemhifem = campocep.value.replace (/\D/g, '')
+
+    if (cepsemhifem.length <= 5) {
+        campocep.value = cepsemhifem
+        return
+    }
+
+    if (cepsemhifem.length > 5 && cepsemhifem.length <= 8) {
+        campocep.value = `${cepsemhifem.slice(0, 5)}-${cepsemhifem.slice(5, 8)}`
+    }
+
 
     console.log(cepsemhifem);
 
@@ -32,6 +42,15 @@ campocep.addEventListener('input', async function(){
        
         const dados = await buscarcep(cepsemhifem);
 
+        if (dados.erro) { statuscep.textContent = 'CEP não encontrado'
+            return
+        }
+        
+        camporua.value = dados.logradouro
+        campobairro.value = dados.bairro
+        campocidade.value = dados.localidade
+        campoestado.value = dados.uf
+        
         statuscep.textContent = 'Endereço encontrado'
 
         console.log(dados);
