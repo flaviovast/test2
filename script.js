@@ -11,6 +11,7 @@ const statuscep = document.querySelector('#status-cep')
 
 
 
+
 async function buscarcep(cep){
     const resposta = await fetch(
         `https://viacep.com.br/ws/${cep}/json/`
@@ -27,11 +28,18 @@ campocep.addEventListener('input', async function(){
 
     if (cepsemhifem.length <= 5) {
         campocep.value = cepsemhifem
+          statuscep.textContent = ''
+          statuscep.style.color = ''
         return
     }
 
     if (cepsemhifem.length > 5 && cepsemhifem.length <= 8) {
         campocep.value = `${cepsemhifem.slice(0, 5)}-${cepsemhifem.slice(5, 8)}`
+        
+        setTimeout(() => {
+        statuscep.textContent = ''
+        statuscep.style.color = ''
+        }, 3000);
     }
 
 
@@ -42,7 +50,9 @@ campocep.addEventListener('input', async function(){
        
         const dados = await buscarcep(cepsemhifem);
 
-        if (dados.erro) { statuscep.textContent = 'CEP não encontrado'
+        if (dados.erro) { 
+            statuscep.textContent = 'CEP não encontrado'
+            statuscep.style.color = 'red';
             return
         }
         
@@ -52,9 +62,12 @@ campocep.addEventListener('input', async function(){
         campoestado.value = dados.uf
         
         statuscep.textContent = 'Endereço encontrado'
+        statuscep.style.color = 'green';
 
         console.log(dados);
     }
     
+
+
 });
 

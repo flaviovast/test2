@@ -216,8 +216,14 @@ button{
 
 }
 
+button:hover{
+    background-color: #5B21B6;
+    cursor: pointer
+}
+
 #status-cep{
-    color: green;
+    font-family:system-ui, sans-serif;
+    font-weight: 400;
 }
 
 
